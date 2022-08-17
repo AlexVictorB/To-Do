@@ -122,8 +122,11 @@ const checkAllTasks = () => {
   const tasks = document.querySelectorAll(".task-item");
 
   
+
   for (let i = 0; i < tasks.length; ++i) {
-    tasks[i].firstChild.classList.add("completed");
+    //tasks[i].firstChild.classList.add("completed");
+    tasks[i].firstChild.classList.toggle("completed");
+
   };
 
   updateLocalStorage();
