@@ -32,7 +32,7 @@ body {
 }
 
 .new-task-container input {
-    flex: 3;
+    flex: 2;
     font-size: 1rem;
     border: 2px solid #d1d3d4;
     border-radius: 5px;
@@ -74,6 +74,10 @@ body {
     align-items: center;
     margin-bottom: 6px;
     margin-top: 6px;
+}
+
+.task-item p {
+    margin-bottom: 0;
 }
 
 .task-item i {
@@ -153,4 +157,89 @@ body {
 
 .button-check-all svg {
     vertical-align: -0.25em;
+}
+
+@media (max-width: 500px) {
+
+    body {
+        height: 100vh;
+        background: linear-gradient(90deg, rgba(65, 184, 131, 1) 0%, rgba(0, 212, 255, 1) 100%) no-repeat;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        min-width: 200px !important;    
+        max-width: 380px !important;
+        padding: 25px 40px !important;
+    }
+
+    .new-task-container {
+        background-color: #fff;
+        padding: 30px 20px !important;
+        border-radius: 5px !important;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    
+        display: flex;
+    }
+    
+    .new-task-container input {
+        max-width: 12rem;
+        font-size: 0.7rem;
+        border: 2px solid #d1d3d4;
+        border-radius: 5px;
+        padding: 12px;
+        font-weight: 500;
+    }
+    
+    .new-task-button {
+        width: 100%;
+        max-width: 4rem;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 0.5rem;
+        border: none;
+        background-color: #41b883;
+        color: #fff;
+        padding: 18px 10px;
+        margin-left: 12px;
+        cursor: pointer;
+    }
+
+    .tasks-container {
+        background-color: #fff;
+        padding: 30px 20px;
+        margin-top: 60px;
+        border-radius: 10px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .task-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        margin-top: 12px;
+    }
+
+    .task-item p {
+        margin-bottom: 0;
+    }
+    
+    .task-item i {
+        background-color: #41b883;
+        color: #fff;
+        padding: 12px;
+        border-radius: 5px;
+    }
+    
+    .task-item i:hover {
+        cursor: pointer;
+        background-color: #359469
+    
+    }
+    
 }
